@@ -1,0 +1,46 @@
+name: chatapp
+description: A new Flutter project.
+
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  flutter_svg: ^1.0.3
+  emoji_picker_flutter: ^1.1.2
+  shared_preferences: ^2.0.13
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^1.0.0
+
+
+flutter:
+
+
+  uses-material-design: true
+
+  assets:
+    - assets/
+  
+  fonts:
+    - family: OpenSans
+      fonts:
+        - asset: fonts/OpenSans-Italic-VariableFont_wdth,wght.ttf
+        - asset: fonts/OpenSans-VariableFont_wdth,wght.ttf
+          style: italic
+    - family: Poppins
+      fonts:
+        - asset: fonts/Poppins-Italic.ttf
+        - asset: fonts/Poppins-Regular.ttf
+        - asset: fonts/Poppins-Bold.ttf
+          weight: 700
+
