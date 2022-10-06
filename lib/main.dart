@@ -1,4 +1,5 @@
 import 'package:chatapp/screens/homescreen.dart';
+import 'package:chatapp/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,15 +13,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'WhatApp Clone',
-        theme: ThemeData(
-            fontFamily: "Poppins",
-            // primarySwatch: Colors.teal,
-            // primaryColor: const Color(0xff075e54),
-            colorScheme: ColorScheme.fromSwatch().copyWith(
-                primary: const Color(0xff075e54),
-                secondary: const Color(0xff128c7e))),
-        home: const HomeScreen());
+      debugShowCheckedModeBanner: false,
+      title: 'WhatApp Clone',
+      theme: ThemeData(
+          fontFamily: "Poppins",
+          // primarySwatch: Colors.teal,
+          // primaryColor: const Color(0xff075e54),
+          colorScheme: ColorScheme.fromSwatch().copyWith(
+              primary: const Color(0xff075e54),
+              secondary: const Color(0xff128c7e))),
+      home: LoginScreen(),
+    );
   }
 }

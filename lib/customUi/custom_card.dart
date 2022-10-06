@@ -5,9 +5,11 @@ import '../Model/chat_model.dart';
 import '../screens/individual_chat_page.dart';
 
 class CustomCard extends StatelessWidget {
-  const CustomCard({Key? key, required this.chat}) : super(key: key);
+  const CustomCard({Key? key, required this.chat, required this.sourceChat})
+      : super(key: key);
 
   final ChatModel chat;
+  final ChatModel sourceChat;
 
   @override
   Widget build(BuildContext context) {
@@ -20,6 +22,7 @@ class CustomCard extends StatelessWidget {
                 MaterialPageRoute(
                     builder: (context) => IndividualPage(
                           chat: chat,
+                          sourceChat: sourceChat,
                         )));
           },
           child: ListTile(

@@ -5,6 +5,7 @@ class ChatModel {
   String? time;
   String? currentMessage;
   String? status;
+  int? id;
 
   ChatModel({
     this.name,
@@ -13,5 +14,6 @@ class ChatModel {
     this.time,
     this.currentMessage,
     this.status,
+    this.id,
   });
 }
