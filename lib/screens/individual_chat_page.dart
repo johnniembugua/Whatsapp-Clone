@@ -1,3 +1,5 @@
+// ignore_for_file: library_prefixes, prefer_final_fields
+
 import 'dart:io';
 
 import 'package:chatapp/customUi/own_message_card.dart';
@@ -51,15 +53,15 @@ class _IndividualPageState extends State<IndividualPage> {
     socket.emit("signin", widget.sourceChat.id);
 
     socket.onConnect((data) {
-      print("connected");
+      //print("connected");
       socket.on('message', (msg) {
-        print(msg);
+        //print(msg);
         setMessage("destination", msg["message"]);
         _scrollController.animateTo(_scrollController.position.maxScrollExtent,
             duration: const Duration(milliseconds: 300), curve: Curves.easeOut);
       });
     });
-    print(socket.connected);
+    ///print(socket.connected);
   }
 
   void sendMessage(String message, int sorceId, targetId) {
@@ -148,7 +150,7 @@ class _IndividualPageState extends State<IndividualPage> {
                     icon: const Icon(Icons.video_camera_back)),
                 IconButton(onPressed: () {}, icon: const Icon(Icons.call)),
                 PopupMenuButton(onSelected: ((value) {
-                  print(value);
+                  //print(value);
                 }), itemBuilder: (context) {
                   return const [
                     PopupMenuItem(
@@ -176,7 +178,7 @@ class _IndividualPageState extends State<IndividualPage> {
               ],
             ),
           ),
-          body: Container(
+          body: SizedBox(
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
             child: WillPopScope(
@@ -284,7 +286,7 @@ class _IndividualPageState extends State<IndividualPage> {
                                                     Icons.camera_alt))
                                           ],
                                         ),
-                                        contentPadding: EdgeInsets.all(5)),
+                                        contentPadding: const EdgeInsets.all(5)),
                                   ),
                                 )),
                             Padding(
@@ -338,11 +340,11 @@ class _IndividualPageState extends State<IndividualPage> {
   }
 
   Widget bottomSheet() {
-    return Container(
+    return SizedBox(
       height: 270,
       width: MediaQuery.of(context).size.width,
       child: Card(
-        margin: EdgeInsets.all(18),
+        margin: const EdgeInsets.all(18),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
           child: Column(
@@ -400,21 +402,21 @@ class _IndividualPageState extends State<IndividualPage> {
               color: Colors.white,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
-          Text(text, style: TextStyle(fontSize: 13, color: Colors.black)),
+          Text(text, style: const TextStyle(fontSize: 13, color: Colors.black)),
         ],
       ),
     );
   }
 
   Widget emojiSelect() {
-    return Container(
+    return SizedBox(
       height: 200,
       child: EmojiPicker(
         onEmojiSelected: (category, emoji) {
-          print(emoji);
+          //print(emoji);
           setState(() {
             _controller.text += emoji.emoji;
           });
@@ -436,15 +438,15 @@ class _IndividualPageState extends State<IndividualPage> {
           indicatorColor: const Color(0xff128c7e),
           iconColor: Colors.grey,
           iconColorSelected: const Color(0xff128c7e),
-          progressIndicatorColor: const Color(0xff128c7e),
+          //progressIndicatorColor: const Color(0xff128c7e),
           backspaceColor: const Color(0xff128c7e),
           skinToneDialogBgColor: Colors.white,
           skinToneIndicatorColor: Colors.grey,
           enableSkinTones: true,
           showRecentsTab: true,
           recentsLimit: 28,
-          noRecentsText: "No Recents",
-          noRecentsStyle: const TextStyle(fontSize: 20, color: Colors.black26),
+          //noRecentsText: "No Recents",
+          //noRecentsStyle: const TextStyle(fontSize: 20, color: Colors.black26),
           tabIndicatorAnimDuration: kTabScrollDuration,
           categoryIcons: const CategoryIcons(),
           buttonMode: ButtonMode.CUPERTINO,

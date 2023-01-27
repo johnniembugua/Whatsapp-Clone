@@ -16,6 +16,8 @@ dependencies:
   emoji_picker_flutter: ^1.1.2
   shared_preferences: ^2.0.13
   socket_io_client: ^1.0.0
+  http: ^0.13.5
+  multiple_result: ^4.0.0
 
 dev_dependencies:
   flutter_test:

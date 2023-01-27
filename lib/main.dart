@@ -1,4 +1,3 @@
-import 'package:chatapp/screens/homescreen.dart';
 import 'package:chatapp/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -22,7 +21,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSwatch().copyWith(
               primary: const Color(0xff075e54),
               secondary: const Color(0xff128c7e))),
-      home: LoginScreen(),
+      home: const LoginScreen(),
     );
   }
 }

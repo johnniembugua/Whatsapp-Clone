@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen>
             icon: const Icon(Icons.search),
           ),
           PopupMenuButton<String>(onSelected: (String value) {
-            print(value);
+            //print(value);
           }, itemBuilder: (context) {
             return const [
               PopupMenuItem(

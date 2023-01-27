@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-
-import '../Model/chat_model.dart';
 
 class ButtonCard extends StatelessWidget {
   const ButtonCard({
